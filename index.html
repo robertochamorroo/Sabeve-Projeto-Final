@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SABEVE - Serviço de Amparo e Bem-estar da Velhice</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-con" href="favicon.ico">
+</head>
+<body>
+    <header>
+        <nav class="container">
+           <img src="Logo SABEVE .jpg" alt="SABEVE Logo" class="logo">
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+
+                
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#oferecemos">Oferecemos</a></li>   
+                <li><a href="#equipe">Equipe</a></li>                             
+                <li><a href="#sobre">Sobre</a></li>                
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+<br> 
+    <section class="hero fade-in-section">
+        <div class="container-hero">
+        <div class="container">
+            <h1>SABEVE</h1>
+            <p>Serviço de Amparo e Bem-estar da Velhice - Uma associação civil dedicada ao cuidado, dignidade e bem-estar dos idosos</p>
+            <h3 class="hero-location">Aqui você será tratado com carinho e respeito.</h3>
+        </div>
+        </div>
+    </section>
+<br>
+
+    <section class="carousel-section fade-in-section" id="servicos">
+        <div class="container3">
+            <h2>Nossos Serviços</h2>
+            <div class="carousel-container">
+                <div class="carousel-track" id="carouselTrack">
+
+                    <div class="carousel-slide">
+                        <h3>Assistência 24 Horas</h3>
+                        <p>Nossa equipe assistencial está disponível 24 horas por dia para garantir o melhor cuidado aos nossos residentes.</p>
+                        <ul>
+                            <li>Administração de medicamentos</li>
+                            <li>Aferição de sinais vitais</li>
+                            <li>Cuidados de higiene e conforto</li>
+                            <li>Acompanhamento conforme grau de dependência</li>
+                        </ul>
+                    </div>
+
+                    <div class="carousel-slide">
+                        <h3>Atividades e Bem-estar</h3>
+                        <p>Promovemos atividades diárias que estimulam o físico e o cognitivo, proporcionando qualidade de vida e momentos de alegria.</p>
+                        <ul>
+                            <li>Estímulo físico e cognitivo</li>
+                            <li>Arte terapia</li>
+                            <li>Jogos e recreação</li>
+                            <li>Saídas de lazer</li>
+                        </ul>
+                    </div>
+
+                    
+                    <div class="carousel-slide">
+                        <h3>Nutrição e Alimentação</h3>
+                        <p>Serviço completo de nutrição com acompanhamento profissional e todas as refeições preparadas com carinho.</p>
+                        <ul>
+                            <li>Acompanhamento nutricional</li>
+                            <li>Todas as refeições incluídas</li>
+                            <li>Cardápio balanceado</li>
+                            <li>Dietas especiais quando necessário</li>
+                        </ul>
+                    </div>
+
+                
+                    <div class="carousel-slide">
+                        <h3>Infraestrutura Completa</h3>
+                        <p>Oferecemos toda a infraestrutura necessária para o conforto e bem-estar dos nossos residentes.</p>
+                        <ul>
+                            <li>Serviço de cozinha e copa</li>
+                            <li>Higienização completa</li>
+                            <li>Lavanderia</li>
+                            <li>Plano médico interno</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="carousel-controls">
+                    <button class="carousel-btn" onclick="previousSlide()">‹</button>
+                    <button class="carousel-btn" onclick="nextSlide()">›</button>
+                </div>
+
+                <div class="carousel-indicators" id="indicators"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services fade-in-section" id="oferecemos">
+        <div class="container">
+            <h2>O Que Oferecemos</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Ambiente Seguro</h3>
+                    <img src="IMG-20250903-WA0018.jpg" alt="Assistência 24 Horas">
+                    <p>Espaços planejados para proporcionar conforto, segurança e sensação de lar para todos os nossos idosos.</p>
+                 </div>
+                <div class="service-card">
+                    <h3>Assistência 24 Horas</h3>
+                    <img src="IMG-20250903-WA0026.jpg" alt="">
+                    <p>Equipe disponível 24 horas para garantir o cuidado e a segurança dos nossos residentes.</p>
+                    </div>
+                <div class="service-card">
+                    <h3>Atividades e Bem-estar</h3>
+                    <img src="IMG-20250903-WA0020.jpg" alt="Nutrição e Alimentação">
+                    <p>Promovemos atividades diárias que estimulam o físico e o cognitivo, proporcionando qualidade de vida e momentos de alegria.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team fade-in-section" id="equipe">
+        <div class="container">
+            <h2>Nossa Equipe</h2>
+            <p class="team-intro">Contamos com uma equipe multidisciplinar de profissionais qualificados e dedicados ao cuidado dos nossos residentes:</p>
+            <div class="team-list">
+                <span class="team-member">Psicologia</span>
+                <span class="team-member">Assistência Social</span>
+                <span class="team-member">Fisioterapia</span>
+                <span class="team-member">Pedagogia</span>
+                <span class="team-member">Enfermeiras</span>
+                <span class="team-member">Técnicas de Enfermagem</span>
+                <span class="team-member">Cuidadores</span>
+                <span class="team-member">Nutrição</span>
+                <span class="team-member">Equipes de Apoio</span>
+            </div>
+        </div>
+    </section>
+ 
+    <section class="about fade-in-section" id="sobre">
+        <div class="container">
+            <div class="about-content">
+                <h2>Nossa Missão</h2>
+                <p>O SABEVE é uma associação civil de assistência social, sem fins lucrativos, que mantém uma Instituição de Longa Permanência para Idosos (ILPI) com ambiente bem qualificado.</p>
+                <p>Oferecemos acolhimento, cuidado, liberdade, bem-estar e dignidade de vida aos idosos durante a sua permanência em nosso lar, proporcionando um ambiente seguro, acolhedor e repleto de carinho.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="contact fade-in-section" id="contato">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p><strong>Endereço:</strong><br>Rodovia RS 522, km 2, Linha Oeste<br>Ijuí - RS</p>
+                    
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3508.8506483349806!2d-53.932727899999996!3d-28.423763099999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94fdd2c828f44bcf%3A0x38cee17b3716985!2sSABEVE!5e0!3m2!1spt-BR!2sbr!4v1761003084107!5m2!1spt-BR!2sbr" width="450" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    
+                    <br>
+                    <p><strong>Horário de Visitas:</strong><br>Segunda a Domingo</p>
+                </div>
+                <a href="https://wa.me/51996672102"target="_blank" class="cta-button">Agende uma Visita</a>
+            </div>
+            
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 SABEVE - Serviço de Amparo e Bem-estar da Velhice. Todos os direitos reservados.</p>
+            <p>Cuidando com amor, respeito e dignidade.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

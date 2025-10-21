@@ -343,12 +343,56 @@
         }
 
         .team-member {
+            position: relative;
             padding: 16px 32px;
             background-color: var(--color-surface);
             border-radius: 24px;
             font-size: 16px;
             color: var(--color-text);
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        /* Pseudo-elemento para a borda animada */
+        .team-member::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 2px solid #346b40; /* cor da borda */
+            border-radius: 24px;
+            box-sizing: border-box;
+            pointer-events: none;
+            z-index: 2;
+            clip-path: inset(100% 0 0 0 round 24px); /* começa invisível */
+        }
+
+        /* Ao passar o mouse, anima a borda */
+        .team-member:hover::before {
+            animation: draw-border 0.7s linear forwards;
+        }
+
+
+
+        @keyframes draw-border {
+            0% {
+                clip-path: inset(100% 0 0 0 round 24px);
+            }
+            25% {
+                clip-path: inset(0 0 0 100% round 24px);
+            }
+            50% {
+                clip-path: inset(0 100% 0 0 round 24px);
+            }
+            75% {
+                clip-path: inset(0 0 100% 0 round 24px);
+            }
+            100% {
+                clip-path: inset(0 0 0 0 round 24px);
+            }
         }
 
         /* Contact Section */
@@ -366,7 +410,7 @@
         }
 
         .contact-content {
-            max-width: 600px;
+            max-width: 1000px;
             margin: 0 auto;
             text-align: center;
         }
@@ -416,6 +460,33 @@
         footer p {
             font-size: 16px;
             opacity: 0.9;
+        }
+
+        iframe{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex: 1;
+            min-width: 400px;
+            border:  solid white;
+            border-radius: 8px;
+            overflow: hidden;
+
+        }
+
+        .mapa {
+            border: 5px solid white;
+         margin-bottom: 30px;
+
+            border-radius: 8px; 
+        }
+        
+        .conteudosembotao {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            max-width: 1200px;
         }
 
         /* Responsive */
@@ -469,9 +540,7 @@
             }
         }
 
-/* Animações e Transições Suaves */
 
-/* Efeito de hover para links de navegação */
 .nav-links a {
     transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
@@ -480,7 +549,6 @@
     transform: translateY(-3px);
 }
 
-/* Efeito de hover para botões */
 .cta-button {
     transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
 }
@@ -490,7 +558,6 @@
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Efeito de hover para cartões de serviço */
 .service-card {
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
@@ -500,7 +567,6 @@
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
-/* Animação de fade-in para seções ao rolar */
 .fade-in-section {
     opacity: 0;
     transform: translateY(20px);
@@ -512,7 +578,6 @@
     transform: translateY(0);
 }
 
-/* Animação para membros da equipe */
 .team-member {
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
@@ -524,7 +589,6 @@
 
 
 
-/* Animação para o cabeçalho */
 header {
     opacity: 0;
     transform: translateY(-20px);
